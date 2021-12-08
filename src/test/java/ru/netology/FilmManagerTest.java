@@ -20,7 +20,7 @@ class FilmManagerTest {
     private Film eleventh = new Film(11, "url11", "Film11", "Genre11");
     private Film twelfth = new Film(12, "url12", "Film12", "Genre12");
 
-    FilmManager manager = new FilmManager(5);
+    FilmManager manager = new FilmManager(6);
 
     @BeforeEach
     public void setUp() {

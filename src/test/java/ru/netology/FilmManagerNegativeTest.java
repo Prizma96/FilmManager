@@ -6,7 +6,7 @@ import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
 public class FilmManagerNegativeTest {
     FilmManager manager10films = new FilmManager();
-    FilmManager manager5films = new FilmManager(5);
+    FilmManager manager6films = new FilmManager(6);
 
     private Film first = new Film(1, "url1", "Film1", "Genre1");
     private Film second = new Film(2, "url2", "Film2", "Genre2");
@@ -23,14 +23,14 @@ public class FilmManagerNegativeTest {
 
     @Test
     public void shouldGetAllWith5() {
-        manager5films.addFilms(fifth);
-        manager5films.addFilms(sixth);
-        manager5films.addFilms(seventh);
+        manager6films.addFilms(fifth);
+        manager6films.addFilms(sixth);
+        manager6films.addFilms(seventh);
         Film[] expected = new Film[]{
                 seventh,
                 sixth,
                 fifth};
-        Film[] actual = manager5films.getFilms();
+        Film[] actual = manager6films.getFilms();
         assertArrayEquals(expected, actual);
     }
 
